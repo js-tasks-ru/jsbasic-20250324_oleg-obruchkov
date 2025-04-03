@@ -6,9 +6,11 @@ function print(text) {
 }
 
 function isValid(name) {
-  if (name === null) return false;
-  let newName = name.trim();
-  return newName !== "" && !newName.includes(" ") && newName.length >= 4;
+  // if (name === null) return false;
+  // return newName !== "" && !newName.includes(" ") && newName.length >= 4;
+
+  let newName = name ? name.trim() : "";
+  return Boolean(name) && !newName.includes(" ") && newName.length >= 4;
 }
 
 function sayHello() {
